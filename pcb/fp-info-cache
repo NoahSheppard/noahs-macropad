@@ -1,4 +1,4 @@
-28441273646536443
+28454240804698575
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -112706,6 +112706,62 @@ Varistor VF
 0
 2
 2
+footprints
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+6
+footprints
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+6
+footprints
+RotaryEncoder_Alps_EC11E_Vertical_H20mm
+Alps rotary encoder, EC12E... without switch (pins are dummy), vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+4
+footprints
+RotaryEncoder_Alps_EC11E_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E... without switch (pins are dummy), vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+4
+footprints
+RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html & http://cdn-reichelt.de/documents/datenblatt/F100/402097STEC12E08.PDF
+rotary encoder
+0
+7
+6
+footprints
+RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html & http://cdn-reichelt.de/documents/datenblatt/F100/402097STEC12E08.PDF
+rotary encoder
+0
+7
+6
+footprints
+RotaryEncoder_Alps_EC12E_Vertical_H20mm
+Alps rotary encoder, EC12E..., vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
+rotary encoder
+0
+5
+4
+footprints
+RotaryEncoder_Alps_EC12E_Vertical_H20mm_CircularMountingHoles
+Alps rotary encoder, EC12E..., vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
+rotary encoder
+0
+5
+4
 footprints
 SK6812MINI-E_fixed
 Add-on for regular MX-footprints with SK6812 MINI-E
