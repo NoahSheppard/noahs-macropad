@@ -11,4 +11,5 @@ if [ ! -d "$OUTPUT_DIR" ]; then
 fi
 
 cp -r "${INPUT_DIR}"* "$OUTPUT_DIR/"
+cp -r "${INPUT_DIR}"* "../wowki/firmware/"
 rm -rf "${INPUT_DIR}"*

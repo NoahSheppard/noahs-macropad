@@ -34,6 +34,70 @@ static void apply_binary_layer(void) {
     layer_move(bin_to_layer[bin_state & 0x07]);
 }
 
+#ifdef OLED_ENABLE
+enum {
+    OLED_W = 128,
+    OLED_H = 32,
+    OLED_FB_SIZE = (OLED_W * OLED_H) / 8,
+};
+
+static uint8_t oled_fb[OLED_FB_SIZE];
+
+static inline void fb_clear(void) { memset(oled_fb, 0, sizeof(oled_fb)); }
+
+static inline void fb_set_pixel(uint8_t x, uint8_t y, bool on) {
+    if (x >= OLED_W || y >= OLED_H) return;
+    uint16_t index = x + (y / 8) * OLED_W;
+    uint8_t mask = 1 << (y % 8);
+    if (on) oled_fb[index] |= mask;
+    else    oled_fb[index] &= ~mask;
+}
+
+static void fb_hline(uint8_t x, uint8_t y, uint8_t width, bool on) {
+    for (uint8_t column = 0; column < width; column++) {
+        fb_set_pixel(x + column, y, on);
+    }
+}
+
+static void fb_vline(uint8_t x, uint8_t y, uint8_t height, bool on) {
+    for (uint8_t row = 0; row < height; row++) {
+        fb_set_pixel(x, y + row, on);
+    }
+}
+
+static void fb_rect(uint8_t x, uint8_t y, uint8_t width, uint8_t height, bool on) {
+    if (width == 0 || height == 0) return;
+    fb_hline(x, y, width, on);
+    fb_hline(x, y + height - 1, width, on);
+    fb_vline(x, y, height, on);
+    fb_vline(x + width - 1, y, height, on);
+}
+
+static void render_oled_pixels(void) {
+    fb_clear();
+
+    fb_rect(0, 0, OLED_W, OLED_H, true);
+
+    for (uint8_t bit = 0; bit < 3; bit++) {
+        uint8_t x = 6 + (bit * 8);
+        uint8_t y_bottom = OLED_H - 3;
+        uint8_t bar_height = (bin_state & (1 << bit)) ? 12 : 4;
+        for (uint8_t row = 0; row < bar_height; row++) {
+            fb_hline(x, y_bottom - row, 5, true);
+        }
+    }
+
+    uint8_t scan_x = (timer_read32() / 20) % OLED_W;
+    fb_vline(scan_x, 1, OLED_H - 2, true);
+}
+
+bool oled_task_user(void) {
+    render_oled_pixels();
+    oled_write_raw((const char *)oled_fb, sizeof(oled_fb));
+    return false; 
+}
+#endif
+
 #ifdef RGBLIGHT_ENABLE
 static void render_bin_indicators(void) {
     for (uint8_t i = 0; i < 3; i++) {

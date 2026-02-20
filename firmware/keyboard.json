@@ -39,8 +39,8 @@
     },
     "i2c": {
         "driver": "i2c",
-        "pin_sda": "GP6",
-        "pin_scl": "GP7"
+        "pin_sda": "GP8",
+        "pin_scl": "GP9"
     },
     "layouts": {
         "LAYOUT": {
