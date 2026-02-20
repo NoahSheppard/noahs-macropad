@@ -1,6 +1,6 @@
 # Noah's Macropad
 
-An 8-key custom macropad built around the Seeed XIAO RP2040, with a custom PCB, 3D-printed case, and Arduino firmware that supports runtime key remapping.
+An 8-key custom macropad with a fancy pantsy OLED screen
 
 ## Photos of my beautiful hackpad
 
@@ -27,8 +27,6 @@ An 8-key custom macropad built around the Seeed XIAO RP2040, with a custom PCB, 
 | through-hole 1N4148 Diode | 8 |
 | MX-Style Switch | 8 |
 | DSA Keycap | 8 |
-
-Source file: [`bom.csv`](bom.csv)
 
 ## Production Files
 
