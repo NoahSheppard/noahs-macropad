@@ -144,6 +144,8 @@
  quantum/process_keycode/process_space_cadet.h \
  quantum/send_string/send_string.h \
  quantum/send_string/send_string_keycodes.h drivers/oled/oled_driver.h \
+ keyboards/noahshpad/firmware/doom/doom_qmk.h \
+ keyboards/noahshpad/firmware/tetris/tetris_qmk.h \
  quantum/keymap_introspection.h
 .build/obj_noahshpad_firmware_NoahSheppard/src/info_config.h:
 platforms/chibios/boards/GENERIC_PROMICRO_RP2040/configs/config.h:
@@ -336,4 +338,6 @@ quantum/process_keycode/process_space_cadet.h:
 quantum/send_string/send_string.h:
 quantum/send_string/send_string_keycodes.h:
 drivers/oled/oled_driver.h:
+keyboards/noahshpad/firmware/doom/doom_qmk.h:
+keyboards/noahshpad/firmware/tetris/tetris_qmk.h:
 quantum/keymap_introspection.h:
